@@ -1,0 +1,5 @@
+C:\Users\Abdullah\source\repos\EAD ASSIGNMENT 2\Assignment.Entities\bin\Debug\Assignment.Entities.dll
+C:\Users\Abdullah\source\repos\EAD ASSIGNMENT 2\Assignment.Entities\bin\Debug\Assignment.Entities.pdb
+C:\Users\Abdullah\source\repos\EAD ASSIGNMENT 2\Assignment.Entities\obj\Debug\Assignment.Entities.csprojAssemblyReference.cache
+C:\Users\Abdullah\source\repos\EAD ASSIGNMENT 2\Assignment.Entities\obj\Debug\Assignment.Entities.dll
+C:\Users\Abdullah\source\repos\EAD ASSIGNMENT 2\Assignment.Entities\obj\Debug\Assignment.Entities.pdb

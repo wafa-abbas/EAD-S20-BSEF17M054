@@ -1,0 +1,69 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/jquery")
+    @Styles.Render("~/Content/home")
+    @Styles.Render("~/Content/css")
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="~/Content/materialize.min.css" media="screen,projection" />
+
+    @RenderSection("onLoad", false)
+</head>
+<body>
+    <script type="text/javascript" src="~/Scripts/materialize.min.js"></script>
+    @RenderSection("createFolders",false)
+    @RenderSection("borders", false)
+    @RenderSection("doubleClick",false)
+    @RenderSection("back",false)
+    @RenderBody()
+
+<div class="container-fluid">
+    <nav style="background:#00B0FF">
+        <div class="nav-wrapper">
+            <a href="@Url.Content("~/User/Home")" style="text-decoration:none;" class="brand-logo center">My Drive</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a class=" modal-trigger" style="text-decoration:none;" href="#modal1">Create Folder</a></li>
+                <li id="backBtn"><a class=" modal-trigger" style="text-decoration:none;" href="#">Back</a></li>
+                <li><a href="@Url.Content("~/User/Logout")" style="text-decoration:none;">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="modal1" class="modal">
+        <div class="modal-content" style="text-align:center">
+            <h4 style="color: #00b0ff; ">FOLDER NAME</h4>
+            <input type="text" name="child" id="childId" style="color:white">
+            <p style="color:red; font-weight:bold" id="ip"></p>
+        </div>
+        <div class="modal-footer">
+            <button class="modal-action waves-effect waves-blue btn blue lighten-1" style="margin-right:7px;" id="createbtn">Create</button>
+            <button class="modal-action modal-close waves-effect waves-red btn red lighten-1 btnClose">Close</button>
+        </div>
+    </div>
+
+
+    <div class="image-container">
+        <img src="~/Content/Images/back.png" class="img responsive-img" />
+    </div>
+
+
+
+    <div id="div-1" style="text-align:center">
+        <p id="p1" style="font-weight:bold"></p>
+    </div>
+
+    <div class="flex-container center">
+    </div>
+
+</div>
+    @RenderSection("modalToggle", false);
+</body>
+</html>

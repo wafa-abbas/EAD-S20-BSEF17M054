@@ -1,0 +1,10 @@
+C:\Users\Abdullah\source\repos\EAD ASSIGNMENT 2\Assignment.BAL\bin\Debug\Assignment.BAL.dll
+C:\Users\Abdullah\source\repos\EAD ASSIGNMENT 2\Assignment.BAL\bin\Debug\Assignment.BAL.pdb
+C:\Users\Abdullah\source\repos\EAD ASSIGNMENT 2\Assignment.BAL\bin\Debug\Assignment.DAL.dll
+C:\Users\Abdullah\source\repos\EAD ASSIGNMENT 2\Assignment.BAL\bin\Debug\Assignment.Entities.dll
+C:\Users\Abdullah\source\repos\EAD ASSIGNMENT 2\Assignment.BAL\bin\Debug\Assignment.DAL.pdb
+C:\Users\Abdullah\source\repos\EAD ASSIGNMENT 2\Assignment.BAL\bin\Debug\Assignment.Entities.pdb
+C:\Users\Abdullah\source\repos\EAD ASSIGNMENT 2\Assignment.BAL\obj\Debug\Assignment.BAL.csprojAssemblyReference.cache
+C:\Users\Abdullah\source\repos\EAD ASSIGNMENT 2\Assignment.BAL\obj\Debug\Assignment.BAL.csproj.CopyComplete
+C:\Users\Abdullah\source\repos\EAD ASSIGNMENT 2\Assignment.BAL\obj\Debug\Assignment.BAL.dll
+C:\Users\Abdullah\source\repos\EAD ASSIGNMENT 2\Assignment.BAL\obj\Debug\Assignment.BAL.pdb

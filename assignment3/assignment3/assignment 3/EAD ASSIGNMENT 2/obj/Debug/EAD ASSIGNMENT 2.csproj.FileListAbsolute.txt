@@ -1,0 +1,16 @@
+C:\Users\Abdullah\source\repos\EAD ASSIGNMENT 2\EAD ASSIGNMENT 2\bin\Debug\EAD ASSIGNMENT 2.exe.config
+C:\Users\Abdullah\source\repos\EAD ASSIGNMENT 2\EAD ASSIGNMENT 2\bin\Debug\EAD ASSIGNMENT 2.exe
+C:\Users\Abdullah\source\repos\EAD ASSIGNMENT 2\EAD ASSIGNMENT 2\bin\Debug\EAD ASSIGNMENT 2.pdb
+C:\Users\Abdullah\source\repos\EAD ASSIGNMENT 2\EAD ASSIGNMENT 2\obj\Debug\EAD ASSIGNMENT 2.csprojAssemblyReference.cache
+C:\Users\Abdullah\source\repos\EAD ASSIGNMENT 2\EAD ASSIGNMENT 2\obj\Debug\EAD_ASSIGNMENT_2.admin_form.resources
+C:\Users\Abdullah\source\repos\EAD ASSIGNMENT 2\EAD ASSIGNMENT 2\obj\Debug\EAD_ASSIGNMENT_2.admin_home_form.resources
+C:\Users\Abdullah\source\repos\EAD ASSIGNMENT 2\EAD ASSIGNMENT 2\obj\Debug\EAD_ASSIGNMENT_2.enterCode_form.resources
+C:\Users\Abdullah\source\repos\EAD ASSIGNMENT 2\EAD ASSIGNMENT 2\obj\Debug\EAD_ASSIGNMENT_2.Form1.resources
+C:\Users\Abdullah\source\repos\EAD ASSIGNMENT 2\EAD ASSIGNMENT 2\obj\Debug\EAD_ASSIGNMENT_2.home_form.resources
+C:\Users\Abdullah\source\repos\EAD ASSIGNMENT 2\EAD ASSIGNMENT 2\obj\Debug\EAD_ASSIGNMENT_2.login_form.resources
+C:\Users\Abdullah\source\repos\EAD ASSIGNMENT 2\EAD ASSIGNMENT 2\obj\Debug\EAD_ASSIGNMENT_2.Properties.Resources.resources
+C:\Users\Abdullah\source\repos\EAD ASSIGNMENT 2\EAD ASSIGNMENT 2\obj\Debug\EAD_ASSIGNMENT_2.signup_form.resources
+C:\Users\Abdullah\source\repos\EAD ASSIGNMENT 2\EAD ASSIGNMENT 2\obj\Debug\EAD_ASSIGNMENT_2.updatePassword_form.resources
+C:\Users\Abdullah\source\repos\EAD ASSIGNMENT 2\EAD ASSIGNMENT 2\obj\Debug\EAD ASSIGNMENT 2.csproj.GenerateResource.cache
+C:\Users\Abdullah\source\repos\EAD ASSIGNMENT 2\EAD ASSIGNMENT 2\obj\Debug\EAD ASSIGNMENT 2.exe
+C:\Users\Abdullah\source\repos\EAD ASSIGNMENT 2\EAD ASSIGNMENT 2\obj\Debug\EAD ASSIGNMENT 2.pdb
