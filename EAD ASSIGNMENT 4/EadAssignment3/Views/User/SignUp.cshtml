@@ -1,0 +1,91 @@
+﻿
+@{
+    ViewBag.Title = "SignUp";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+@section scripts{
+    <script>
+        $(function () {
+            var basePath = "https://localhost:44313/";
+            $("#btnSignUp").on("click", function () {
+                let name = $("#username").val().trim();
+                let login = $("#login").val().trim();
+                let password = $("#password").val().trim();
+                let cpassword = $("#cpassword").val().trim();
+                if (login !== "" && password !== "" && name !== "" && cpassword!=="") {
+                    if (password !== cpassword) {
+                           $("#cpassword").val("");
+                         $("#error").text("Password not matched!");
+                         setTimeout(() => {
+                            const elem = $("#error").text("");
+                         }, 2000);
+                        return false;
+                     }
+                    var data = new FormData();
+                    data.append("id", 0);
+                    data.append("name", name);
+                    data.append("login", login);
+                    data.append("password", password);
+                    var settings = {
+                        type: "POST",
+                        url: basePath+"api/User/RegisterUser",
+                        contentType: false,
+                        processData: false,
+                        data: data,
+                        success: function (response) {
+                           
+                            if (!response.success) {
+                                $("#password").val("");
+                                $("#cpassword").val("");
+                                $("#login").val("");
+                                $("#error").text("User already exists!");
+                                setTimeout(() => {
+                                    const elem = $("#error").text("");
+                                }, 2000);
+                                return false;
+                            }
+                            else {
+                               window.location.href="@Url.Content("~/User/Login")";
+                            }
+                        },
+                        error: function (error) {
+                            console.log(error);
+                        }
+                    };
+
+                    $.ajax(settings);
+                }
+                else {
+                    $("#error").text("Fields are empty!");
+                    setTimeout(() => {
+                        const elem = $("#error").text("");
+                     }, 2000);
+                    return false;
+                }
+
+            });
+
+        });
+    </script>
+}
+
+
+
+@section heading{
+    <h2 class="active"> Sign Up </h2>
+}
+
+@section fields{
+    <input type="text" id="username" class="fadeIn second" name="username" placeholder="Username">
+    <input type="text" id="login" class="fadeIn third" name="login" placeholder="Login ID">
+    <input type="password" id="password" class="fadeIn fourth" name="password" placeholder="Password">
+    <input type="password" id="cpassword" class="fadeIn fifth" name="cpassword" placeholder="Confirm Password">
+    <input type="submit" id="btnSignUp" class="fadeIn sixth" value="Sign Up">
+    <div style="color:red" id="error"></div>
+}
+
+@section footer{
+    <a class="underlineHover" href="@Url.Content("~/User/Login")">Already have an account?</a>
+}
+
