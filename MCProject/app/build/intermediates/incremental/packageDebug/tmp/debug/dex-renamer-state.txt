@@ -1,0 +1,4 @@
+#Sat May 16 22:33:49 PKT 2020
+base.0=C\:\\Users\\TAYYAB ASHRAF\\AndroidStudioProjects\\MCProject\\app\\build\\intermediates\\dex\\debug\\out\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
