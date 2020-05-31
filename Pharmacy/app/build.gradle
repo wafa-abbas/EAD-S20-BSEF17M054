@@ -1,0 +1,145 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        maven { url 'https://maven.fabric.io/public' }
+
+    }
+
+    dependencies {
+
+        classpath 'io.fabric.tools:gradle:1.+'
+
+        classpath 'me.tatarka:gradle-retrolambda:3.2.5'
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+
+        classpath 'com.google.gms:google-services:3.0.0'
+
+
+    }
+}
+apply plugin: 'com.android.application'
+apply plugin: 'me.tatarka.retrolambda'
+apply plugin: 'io.fabric'
+apply plugin: 'com.neenbedankt.android-apt'
+
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+    maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+    maven { url "http://dl.bintray.com/jjhesk/maven" }
+
+}
+
+
+android {
+    signingConfigs {
+        // Comment out below lines to remove key signing
+        testReleaseKey {
+            keyAlias "testReleaseKey"
+            keyPassword "testReleaseKey"
+            storeFile file("/home/arka/keystores/arkaTestKeystore.jks")
+            storePassword "arkaTestKeystore"
+        }
+    }
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+    defaultConfig {
+        applicationId "com.ahanapharmacy.app"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+
+
+    }
+
+    defaultConfig {
+        // Stops the Gradle plugin’s automatic rasterization of vectors
+        generatedDensities = []
+        vectorDrawables.useSupportLibrary = true
+
+    }
+    // Flag to tell aapt to keep the attribute ids around
+    aaptOptions {
+        additionalParameters "--no-version-vectors"
+    }
+    buildTypes {
+
+        buildTypes.each {
+            it.resValue "string", "firebase_url", FIREBASE_URL
+            it.resValue "string", "server_url", SERVER_URL
+
+            it.resValue "string", "twitter_key", TWITTER_KEY
+            it.resValue "string", "twitter_secret", TWITTER_SECRET
+
+
+            it.resValue "string", "cloudinary_url", CLOUDINARY_URL
+
+        }
+
+        debug {
+            ext.enableCrashlytics = false
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+        }
+        release {
+            // comment out below line to disable signing
+            signingConfig signingConfigs.testReleaseKey
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile('com.digits.sdk.android:digits:1.10.3@aar') {
+        transitive = true;
+    }
+    compile('com.crashlytics.sdk.android:crashlytics:+@aar') {
+        transitive = true;
+    }
+    apt 'com.jakewharton:butterknife-compiler:8.0.1'
+    retrolambdaConfig 'net.orfjackal.retrolambda:retrolambda:2.3.0'
+    compile 'com.squareup.okhttp:okhttp:2.7.5'
+    compile 'com.squareup.okhttp:okhttp-urlconnection:2.7.5'
+    compile 'com.jakewharton:butterknife:8.0.1'
+    compile 'io.reactivex:rxandroid:1.1.0'
+    compile 'io.reactivex:rxjava:1.1.3'
+    compile 'com.android.support:design:23.4.0'
+    compile 'com.mobsandgeeks:android-saripaar:2.0.3'
+    compile 'com.android.support:support-v4:23.4.0'
+    compile 'com.android.support:recyclerview-v7:23.+'
+    compile 'com.android.support:cardview-v7:23.4.0'
+    compile 'com.github.jkwiecien:EasyImage:1.2.3'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.cloudinary:cloudinary-android:1.4.2'
+    compile 'com.github.chrisbanes:PhotoView:1.2.6'
+    compile 'com.jakewharton.timber:timber:4.1.2'
+    compile 'com.github.medyo:android-about-page:1.0.8'
+    compile 'com.github.paolorotolo:appintro:3.4.0'
+    compile 'com.google.firebase:firebase-database:9.0.0'
+    compile 'com.google.firebase:firebase-auth:9.0.0'
+    compile 'com.android.support:support-annotations:23.4.0'
+
+    compile 'com.google.firebase:firebase-messaging:9.0.0'
+
+    compile 'jp.wasabeef:recyclerview-animators:2.2.3'
+
+    compile 'com.google.firebase:firebase-config:9.0.0'
+
+    compile 'com.google.firebase:firebase-core:9.0.0'
+
+
+
+
+}
+
+apply plugin: 'com.google.gms.google-services'
